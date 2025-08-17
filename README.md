@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 | Model Name | Release Date | Model Architecture | Google Drive Link | 
 |:------------:|:------------:|:-------------------:|:------------------:|
-| DermINO_Base | 08/2025 | ViT-B/14 | [Link](https://drive.google.com/file/d/17J4MjsZu3gdBP6xAQi_NMDVvH65a00HB/view?usp=sharing) | 
+| DermINO_Base | 08/2025 | ViT-B/14 | [Link]([https://drive.google.com/file/d/17J4MjsZu3gdBP6xAQi_NMDVvH65a00HB/view?usp=sharing](https://drive.google.com/file/d/1-v8N6LNISdcF7SGYpTNq5W9szoiyZGRJ/view?usp=drive_link)) | 
 
 ## 2. Data Preparation
 
