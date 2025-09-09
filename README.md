@@ -7,12 +7,10 @@ Evaluated across 20 datasets, DermINO consistently outperforms state-of-the-art 
 
 ## Citation
 ```bibtex
-@article{yan2025multimodal,
-  title={A multimodal vision foundation model for clinical dermatology},
-  author={Yan, Siyuan and Yu, Zhen and Primiero, Clare and Vico-Alonso, Cristina and Wang, Zhonghua and Yang, Litao and Tschandl, Philipp and Hu, Ming and Ju, Lie and Tan, Gin and others},
-  journal={Nature Medicine},
-  pages={1--12},
-  year={2025},
-  publisher={Nature Publishing Group}
+@article{xu2025dermino,
+  title={DermINO: Hybrid Pretraining for a Versatile Dermatology Foundation Model},
+  author={Xu, Jingkai and Cheng, De and Zhao, Xiangqian and Yang, Jungang and Wang, Zilong and Jiang, Xinyang and Luo, Xufang and Chen, Lili and Ning, Xiaoli and Li, Chengxu and others},
+  journal={arXiv preprint arXiv:2508.12190},
+  year={2025}
 }
 ```
