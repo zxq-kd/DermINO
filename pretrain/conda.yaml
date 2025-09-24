@@ -1,0 +1,21 @@
+name: DermINO
+channels:
+  - defaults
+  - pytorch
+  - nvidia
+  - xformers
+  - conda-forge
+dependencies:
+  - python=3.9.20
+  - pytorch::pytorch=2.4.0
+  - pytorch::pytorch-cuda=12.1.0
+  - pytorch::torchvision=0.19.0
+  - omegaconf=2.3.0
+  - torchmetrics=1.4.0.post0
+  - fvcore=0.1.5.post20221221
+  - iopath=0.1.10
+  - xformers::xformers=0.0.27.post2
+  - pip=24.2
+  - pip:
+    - --extra-index-url https://pypi.nvidia.com
+    - cuml-cu12==24.8.0
