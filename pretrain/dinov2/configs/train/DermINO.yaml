@@ -1,0 +1,31 @@
+dino:
+  head_n_prototypes: 65536
+  head_bottleneck_dim: 256
+ibot:
+  separate_head: true
+  head_n_prototypes: 65536
+  head_bottleneck_dim: 256
+train:
+  dataset_path:  MyDataset:root=/ampha/tenant4/down_data/data_800
+  batch_size_per_gpu:  256
+  saveckp_freq:  1000000
+  OFFICIAL_EPOCH_LENGTH: 300
+  num_workers:  18
+  centering: sinkhorn_knopp
+  class_weight: 1.0
+student:
+  arch: vit_large
+  patch_size: 16
+  drop_path_rate: 0.4
+  ffn_layer: swiglufused
+  block_chunks: 0
+teacher:
+  momentum_teacher: 0.994
+optim:
+  epochs: 100
+  weight_decay_end: 0.2
+  base_lr: 2.0e-04  # learning rate for a batch size of 1024
+  warmup_epochs: 10
+  layerwise_decay: 0.9
+crops:
+  local_crops_size: 96
