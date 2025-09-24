@@ -1,0 +1,26 @@
+    if args.save_logit == True:
+        dataset_name = output_dir.split("/")[-2]
+        model_name = output_dir.split("/")[-1]
+        checkpoint_dir = output_dir.replace("segment_output_3", "segment_output_2")
+        checkpoint_dir = checkpoint_dir + "/segmentation_model.pt"
+        #breakpoint()
+        #checkpoint_path = "/ampha/tenant4/base_output/segment_output_2/ph2_data/output_35/segmentation_model.pt"
+        state_dict = torch.load(checkpoint_dir)
+        msg = model.load_state_dict(state_dict)
+        model = model.to(device)
+        
+        all_data = []
+        mask_list = []
+        for data, target, mask_path in valid_loader:
+            all_data.append(data)
+            mask_list.extend(mask_path)
+        all_data = torch.cat(all_data, dim=0)
+
+        features = model(all_data.to(device))
+        
+        logit_dir = "/ampha/tenant4/save_data/logit/segment_logit"
+        save_dir = f"{logit_dir}/{dataset_name}/{model_name}"
+        os.makedirs(save_dir, exist_ok=True)
+        for index, one_feature in enumerate(features):
+            img_name = mask_list[index].split("/")[-1].split(".")[0]
+            np.save(f"{save_dir}/{img_name}.npy", one_feature.detach().cpu().numpy())
