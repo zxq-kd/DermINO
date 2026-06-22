@@ -5,6 +5,19 @@ This integrated method not only deepens the understanding of complex dermatologi
 Evaluated across 20 datasets, DermINO consistently outperforms state-of-the-art models across a wide range of tasks. It excels in high-level clinical applications including malignancy classification, disease severity grading, multi-category diagnosis, and dermatological image caption, while also achieving state-of-the-art performance in low-level tasks such as skin lesion segmentation. Furthermore, DermINO demonstrates strong robustness in privacy-preserving federated learning scenarios and across diverse skin types and sexes. 
 
 
+## 1. Download Dermino Pre-trained Weights
+
+### Obtaining Model Weights
+
+| Model Name | Release Date | Model Architecture | Google Drive Link/HuggingFace | 
+|:------------:|:------------:|:-------------------:|:------------------:|
+| Dermino | 06/2026 | ViT-B/14 | [Link](https://drive.google.com/file/d/1-v8N6LNISdcF7SGYpTNq5W9szoiyZGRJ/view?usp=drive_link) | 
+
+
+## 2. Data Preparation
+
+
+
 ## Citation
 ```bibtex
 @article{xu2025dermino,
